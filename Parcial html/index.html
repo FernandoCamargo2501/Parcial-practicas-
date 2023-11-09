@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" type="text/css" rel="stylesheet"/>
+    <title>index</title>
+    
+</head>
+<body>
+    <header>
+        <div class="Barra">
+            <div class="Marca">
+                <a href="index.html">Roof inmobiliaria</a>
+            </div>
+            <section class="rede">
+                <div class="redes3">
+                    <a href="https://www.facebook.com/"><img src="descarga.png" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="descarga.jpg" alt=""></a>
+                    <a href="https://web.whatsapp.com/"><img src="descarga (1).jpg" alt=""></a>
+                </div>
+            </section>
+
+            
+        </div>
+    </header>
+    <div class="contenedor-principal">
+        <!-- Tarjeta 1 Habitaciones de Hotel-->
+
+        <div class="contenedor-tarjeta">
+            <div class="tarjetas" id="tarjeta1">   
+            </div>
+            <a href="hotel.html">Habitaciones de hotel</a>
+        </div>
+        
+
+        <div class="contenedor-tarjeta">
+            <div class="tarjetas" id="tarjeta2">   
+            </div>
+            <a href="departamentos.html">Departamentos</a>
+        </div>
+
+        <div class="contenedor-tarjeta">
+            <div class="tarjetas" id="tarjeta3">   
+            </div>
+            <a href="casas.html">Casas</a>
+        </div>
+    </div>
+ 
+    <h1 id="id"></h1>
+
+    <a href="pagina2.html"></a>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26801.8913991969!2d-68.88969004154207!3d-32.891916800748454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e090681bf6165%3A0x7d03d6b7694f2f58!2sInmobiliaria%20Fernando%20Puebla!5e0!3m2!1ses!2sar!4v1699557970820!5m2!1ses!2sar" width="100%" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <div class="info"> <p class="info">Nuestra inmobiliaria se fundó en el año 2001, como una manera de afrontar la crisis 
+        económica que transcurría. Durante más de 20 años supimos llevar adelante esta empresa que comenzó 
+        como un emprendimiento familiar y hoy estamos acá para ayudarte a encontrar tu “techo” ideal.  
+    </p></div>
+    <div class="container">
+        <div> 
+            <form class="form" onsubmit="return validarFormulario()">
+                <h2>CONTACTO</h2>
+                <p>Nombre:</p>
+                <input id="nombre" type="text" placeholder="Escribe tu nombre aquí...">
+                <p>Correo:</p>
+                <input id="correo" type="text" placeholder="Háganos saber cómo contactarlo de vuelta...">
+                <p>Consulta:</p>
+                <input id="consulta" type="text" placeholder="Qué te gustaría consultarnos...">
+                <button type="submit">Enviar consulta</button>
+            </form>            
+            <script src="Vf.js"></script>
+        </div>
+    </div>
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var correo = document.getElementById("correo").value;
+            var consulta = document.getElementById("consulta").value;
+            
+            if (nombre === "") {
+                alert("Por favor, ingresa tu nombre.");
+                return false;
+            }
+            
+            if (correo === "" || !validarCorreo(correo)) {
+                alert("Por favor, ingresa una dirección de correo válida.");
+                return false;
+            }
+            
+            if (consulta === "") {
+                alert("Por favor, ingresa tu consulta.");
+                return false;
+            }
+            
+            return true;
+        }
+        
+        function validarCorreo(correo) {
+            var pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return pattern.test(correo);
+        }
+    </script>
+
+
+    
+</body>
+<footer class="pie">
+    <div class="pe">
+        <h1>Roof Inmobiliaria</h1>
+        <div class="redes2">
+            <a href="https://www.facebook.com/"><img src="descarga.png" alt=""></a>
+            <a href="https://www.instagram.com/"><img src="descarga.jpg" alt=""></a>
+            <a href="https://web.whatsapp.com/"><img src="descarga (1).jpg" alt=""></a>
+        </div>
+    </div>
+</footer>
+</html>
